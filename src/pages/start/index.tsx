@@ -5,9 +5,12 @@ import './start.css';
 
 const Start = () => {
   return (
-    <div>
+    <div className='start-container'>
       <NavBar />
       <StartPageContent />
+      <div className='test red'></div>
+      <div className='test green'></div>
+      <div className='test blue'></div>
     </div>
   );
 };

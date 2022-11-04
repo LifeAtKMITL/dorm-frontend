@@ -8,6 +8,9 @@ import { Divide as Hamburger } from 'hamburger-react';
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
+  const [sidebar, setSidebar] = useState(false);
+  const showSideBar = () => setSidebar(!sidebar);
+
   return (
     <div>
       <nav>
@@ -23,10 +26,11 @@ const NavBar = () => {
               <p className='font-link'>DOOHEE</p>
             </div>
           </div>
-          <div className='hamburger'>
+          <div className='hamburger' onClick={showSideBar}>
             <Hamburger color='#15cd64' toggled={isOpen} rounded toggle={setOpen} />
           </div>
         </div>
+        <div className={sidebar ? 'sidebar openbar' : ' sidebar closebar'}></div>
       </nav>
     </div>
   );

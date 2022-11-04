@@ -7,11 +7,48 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
+  z-index: 2000;
   position: fixed;
-  animation-name: slide;
-  animation-duration: 2s;
 }
 /* End of Navbar Box */
+
+/* SideBar */
+.sidebar {
+  background-color: aliceblue;
+  width: 100%;
+  z-index: 1000;
+  animation-duration: 1s;
+  position: fixed;
+}
+
+.openbar {
+  height: 100vh;
+  animation-name: open;
+}
+
+.closebar {
+  height: 0;
+  animation-name: close;
+}
+
+@keyframes open {
+  from {
+    height: 0vh;
+  }
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes close {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+  }
+}
+/* End of Side Bar */
 
 /* Navbar item */
 .logo {
@@ -55,3 +92,7 @@
 }
 
 /* End of Navbar item */
+
+li {
+  color: black;
+}
