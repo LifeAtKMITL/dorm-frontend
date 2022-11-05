@@ -2,7 +2,6 @@ import React from 'react';
 
 import { AppBar, Box, Toolbar } from '@mui/material';
 import { logoImg } from 'assets';
-
 import NavBar from 'components/navbar';
 
 export type MainLayoutProps = {
@@ -15,7 +14,6 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <AppBar>
         <NavBar />
       </AppBar>
-
       <Box style={{ background: 'black' }}>
         <Toolbar />
         {children}
