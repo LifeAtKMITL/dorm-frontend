@@ -1,0 +1,35 @@
+.Modal {
+    width: 100%;
+    height: auto;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    /* animation: ; */
+    animation: pop-swirl 0.8s ease forwards;
+}
+
+@keyframes pop-swirl {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.Modal-header {
+    background-color:#15CD64;
+    color: white;
+    width: 100%;
+    padding: 10px 25px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.Modal-content {
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
