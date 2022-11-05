@@ -3,7 +3,7 @@ import React from 'react';
 export const SidebarData = [
   {
     title: 'About',
-    path: '/home',
+    path: '/',
     cName: 'nav-text',
   },
   {
