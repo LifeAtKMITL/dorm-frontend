@@ -3,4 +3,5 @@ export const enum SectionIdEnum {
   dormSample = 'dormSample',
   dormData = 'dormData',
   dormReview = 'dormReview',
+  dormSort = 'dormSort',
 }

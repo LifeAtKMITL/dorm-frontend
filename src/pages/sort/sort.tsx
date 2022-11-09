@@ -1,19 +1,15 @@
 import React from 'react';
 
-import { CardComponent, MainLayout, SectionContainer } from 'components';
+import { MainLayout, SectionContainerSort } from 'components';
 import { SectionIdEnum } from 'types';
-import { DormCustomSection, DormSampleSection } from 'sections';
+import { SortSectionComponent } from 'sections';
 
 
 
 const sections = [
   {
-    sectionId: SectionIdEnum.dormCustom,
-    component: <DormCustomSection />,
-  },
-  {
-    sectionId: SectionIdEnum.dormSample,
-    component: <DormSampleSection />,
+    sectionId: SectionIdEnum.dormSort,
+    component: <SortSectionComponent />,
   },
 ]
 
@@ -23,9 +19,9 @@ const Sort = () => {
   <div>
     <MainLayout>
       {sections.map(({ component, sectionId }) => {
-        return <SectionContainer sectionId={sectionId} key={sectionId}>
+        return <SectionContainerSort sectionId={sectionId} key={sectionId}>
           {component}
-        </SectionContainer>;
+        </SectionContainerSort>;
         
       })}
 

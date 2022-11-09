@@ -3,7 +3,6 @@ import React from 'react';
 import { MainLayout, SectionContainer } from 'components';
 import { SectionIdEnum } from 'types';
 import { DormCustomSection, DormSampleSection } from 'sections';
-import NavBar from 'components/navbar';
 
 
 

@@ -15,3 +15,13 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({ children, se
     </div>
   );
 };
+
+export const SectionContainerSort: React.FC<SectionContainerProps> = ({ children, sectionId }) => {
+  return (
+    <div id={sectionId} key={sectionId}>
+      <Container>
+        <Box minHeight="100vh">{children}</Box>
+      </Container>
+    </div>
+  );
+};
