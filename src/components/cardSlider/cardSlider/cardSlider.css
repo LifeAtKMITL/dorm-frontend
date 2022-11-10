@@ -1,31 +1,36 @@
 .Slider {
-    margin: 10px;
-    padding : 5px;
-    color: #ffffff;
-    /* background-color: rgb(255, 255, 255, 0.1);
+  margin: 10px;
+  padding: 5px;
+  color: #ffffff;
+  /* background-color: rgb(255, 255, 255, 0.1);
     border-radius: 12px; */
 }
 
 .header {
-    margin: auto;
-    background-color: rgb(219, 253, 255 0.1);
-    font-size: 32px;
+  margin: auto;
+  background-color: rgb(219, 253, 255 0.1);
+  font-size: 32px;
 }
 
 .body {
-    margin: auto;
-    width: 95%;
-    text-align: center;
-    justify-content: center;
+  margin: auto;
+  width: 95%;
+  text-align: center;
+  justify-content: center;
 }
 
 .list_link {
-    padding: 15px;
-    /* display: none; */
+  padding: 15px;
+  /* display: none; */
 }
 
 .link {
-    color: white;
-    padding-right: 5%;
+  color: white;
+  padding-right: 5%;
 }
 
+.zoneBtn {
+  margin-left: 10px;
+  width: 70px;
+  height: 30px;
+}

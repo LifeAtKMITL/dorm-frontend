@@ -111,3 +111,6 @@
 }
 
 /* container */
+.navbar-toggle {
+  list-style-type: none;
+}

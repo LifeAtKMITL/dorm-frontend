@@ -14,7 +14,7 @@ import 'swiper/css/zoom';
 import { Pagination, Zoom } from 'swiper';
 import { CardComponent } from '../card/card.component';
 
-export const Swipe = (props: any) => {
+export const Swipe2 = (props: any) => {
   const { testData } = props;
   const data = testData;
   console.log(data);
@@ -46,9 +46,6 @@ export const Swipe = (props: any) => {
           );
         })}
       </Swiper>
-      {/* {data.map((x) => (
-        <h1>{x.name}</h1>
-      ))} */}
     </>
   );
 };
