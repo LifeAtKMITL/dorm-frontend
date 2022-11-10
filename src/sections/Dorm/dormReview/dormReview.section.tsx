@@ -84,18 +84,18 @@ export const DormReviewSection: React.FC = () => {
   useEffect(() => {
     axios
     // change API get by dormId
-    .get(`https://jsonplaceholder.typicode.com/posts/`)
-    .then((res) => {
-      console.log(res);
-      setPosts(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    // .get(`https://jsonplaceholder.typicode.com/posts/`)
+    // .then((res) => {
+    //   console.log(res);
+    //   setPosts(res.data);
+    // })
+    // .catch((err) => {
+    //   console.log(err);
+    // });
 
-    // setPosts(fake)
-    // console.log(fake)
-    // console.log(dormId)
+    setPosts(fake)
+    console.log(fake)
+    console.log(dormId)
   }, []);
 
   return (
@@ -105,8 +105,8 @@ export const DormReviewSection: React.FC = () => {
           <h1>Review</h1>
           {/* <ReviewCard image='' name={post.id} content={post.title}></ReviewCard> */}
           {posts.map((post) => (
-            <ReviewCard image='' name={post.id} content={post.title}></ReviewCard>
-            // <ReviewCard image={post.image} name={post.username} content={post.textReview} />
+            // <ReviewCard image='' name={post.id} content={post.title}></ReviewCard>
+            <ReviewCard image={post.image} name={post.username} content={post.textReview} />
           ))}
         </Box>
       </div>
