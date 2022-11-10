@@ -13,18 +13,18 @@ import { logoImg } from 'assets';
 //     content: React.ReactNode;
 //   };
 
-export const CardComponent = () => {
-
+export const CardComponent = (props: any) => {
+  const { imgPath, dormName, rangePrice1, rangePrice2 } = props;
   return (
     <Card style={{ margin: 10 }}>
       <CardActionArea>
-        <CardMedia component='img' image={logoImg} alt='LOGO' />
+        <CardMedia component='img' image={imgPath} alt='LOGO' sx={{ height: '200px' }} />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
-            AJ Park
+            {dormName}
           </Typography>
           <Typography variant='body2' color='text.secondary'>
-            AJ PARK is da worse dorm in this fuvking world <br />
+            {rangePrice1}-{rangePrice2} <br />
             - Air Con <br />
             - TV <br />
           </Typography>

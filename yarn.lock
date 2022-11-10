@@ -623,6 +623,11 @@
   "resolved" "https://registry.npmjs.org/@types/semver/-/semver-7.3.13.tgz"
   "version" "7.3.13"
 
+"@types/uuid@^8.3.4":
+  "integrity" "sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw=="
+  "resolved" "https://registry.npmjs.org/@types/uuid/-/uuid-8.3.4.tgz"
+  "version" "8.3.4"
+
 "@typescript-eslint/eslint-plugin@^5.40.0":
   "integrity" "sha512-DXUS22Y57/LAFSg3x7Vi6RNAuLpTXwxB9S2nIA7msBb/Zt8p7XqMwdpdc1IU7CkOQUPgAqR5fWvxuKCbneKGmA=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.41.0.tgz"
@@ -2670,6 +2675,11 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"uuid@^9.0.0":
+  "integrity" "sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-9.0.0.tgz"
+  "version" "9.0.0"
 
 "vite-tsconfig-paths@^3.5.1":
   "integrity" "sha512-xJMgHA2oJ28QCG2f+hXrcqzo7IttrSRK4A//Tp94CfuX5eetOx33qiwXHUdi3FwkHP2ocpxHuvE45Ix67gwEmQ=="

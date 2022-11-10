@@ -3,7 +3,7 @@ import { Routes as Router, Route } from 'react-router-dom';
 
 const Start = lazy(() => import('pages/start'));
 const Home = lazy(() => import('pages/home/home'));
-const Custom = lazy(() => import('pages/custom/custom'));
+const Custom = lazy(() => import('pages/custom'));
 const Dorm = lazy(() => import('pages/dorm/dorm'));
 const Sort = lazy(() => import('pages/sort/sort'));
 
