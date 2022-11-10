@@ -1,7 +1,15 @@
 import React from 'react';
 import './startPageContent.css';
 
+import { useNavigate } from 'react-router-dom';
+
 const StartPageContent = () => {
+
+  const navigate = useNavigate();
+
+  const navigateToCustomPage = () => {
+    navigate('home');
+  };
   return (
     <div>
       <div className='startPage'>
@@ -23,9 +31,9 @@ const StartPageContent = () => {
             </div>
           </div>
         </div>
-        <div className='btn' role='button'>
+        <button className='btn' role='button' onClick={navigateToCustomPage}>
           <p className='content-font'>Get Started</p>
-        </div>
+        </button>
       </div>
     </div>
   );
