@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material';
+
 import { CardComponent } from 'components';
 import { SliderComponent } from 'components/cardSlider/cardSlider/cardSlider.component';
 import { SliderComponent2 } from 'components/cardSlider/cardSlider/cardSlider2.components';

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { MainLayout, SectionContainer } from 'components';
 import { SectionIdEnum } from 'types';
 import { DormCustomSection, DormSampleSection } from 'sections';
+
 import NavBar from 'components/navbar';
 import axios from 'axios';
 

@@ -8,11 +8,11 @@
     border: none;
     color: white;
     margin-left: 20px;
-    padding: 0px 30px;
+    padding: 5px 30px;
     text-align: center;
     text-decoration: none;
     /* display: inline-block;  */
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bolder;
     border-radius: 32px;
 }
