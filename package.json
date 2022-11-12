@@ -23,7 +23,6 @@
     "react-swipeable": "^7.0.0",
     "swiper": "^8.4.4",
     "uuid": "^9.0.0",
-
     "vite-tsconfig-paths": "^3.5.1"
   },
   "devDependencies": {

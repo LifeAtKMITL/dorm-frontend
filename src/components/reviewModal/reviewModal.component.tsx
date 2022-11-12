@@ -2,53 +2,76 @@ import React, { useEffect, useState } from 'react';
 
 import Rating from '@mui/material/Rating';
 import './reviewModal.css';
+import axios from 'axios';
 
-
-// prop from dormData
+// prop from dormData (open/close Modal)
 import { functionProp } from 'sections';
+
+// prop(dormId) from card
 
 
 
 
 export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
+  //state
+  const [dormId, setDormId] = useState('63660db5bd6516697b9cde60');
+  
+  const [textReview, setTextReview] = useState('');
   const [star, setStar] = useState<number | null>(3);
 
-  //state
-  const [review, setReview] = useState({
-    thought: '',
-    star: 3,
-  });
-
-  const [allReview, setAllReview ] = useState<Object[]>([]);
+//   useEffect(() => {
+//     axios
+//     .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/${dormId}`)
+//     .then(res => {
+//       console.log(res);
+//     })
+//     .catch(err => {
+//       console.log(err);
+//     });
+// }, []);
 
 
   //function
-  const onChange = (event: { target: { name: any; value: any } }) => {
-    const { name, value } = event.target;
-    setReview((prevReview) => {
-      return {
-        ...prevReview,[name]: value,
-      };
-    });
+  const onChange = (event: { target: any; }) => {
+    const value = event.target.value;
+    setTextReview(value);
   };
 
   function onSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
-
-    setAllReview((prevAllReview) => {
-      return [...prevAllReview, review];
+    // post textReview
+    console.log('review : ', textReview);
+    axios
+    .post(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/create`, {
+      dormId: dormId,
+      textReview: textReview,
+    })
+    .then(res => {
+      console.log("Post textReview : ", res);
+    })
+    .catch(err => {
+      console.log(err);
     });
-    console.log('review', review);
-    console.log('Allreview', allReview)
-    console.log(Object.values(allReview))
-    setReview({ thought: '', star: 3 });
+
+    //post star
+    console.log('star : ', star);
+    axios
+    .post(`https://life-at-kmitl-backend-production.up.railway.app/dorm/score`, {
+      dormId: dormId,
+      star: star,
+    })
+    .then(res => {
+      console.log("Post star : ", res);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+
+    setTextReview('');
+    setStar(3);
     setOpen(false)
-    console.log(open)
   }
-
-  //element
-
-
 
     return (
       <div className='Modal'>
@@ -60,11 +83,11 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
             <label>Review</label>
             <br />
             <textarea
-              name='thought'
+              name='textReview'
               rows={3}
               cols={25}
               placeholder='Share your thoughts !!'
-              value={review.thought}
+              value={textReview}
               onChange={onChange}
             />
             <br />
@@ -72,7 +95,7 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
             <br />
             <Rating
               name='star'
-              value={review.star}
+              value={star}
               onChange={(event, newValue) => {
                 setStar(newValue);
               }}
