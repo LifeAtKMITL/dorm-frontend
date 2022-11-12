@@ -12,7 +12,7 @@ const Routes = () => {
     <Suspense fallback={<>Loading...</>}>
       <Router>
         <Route path='/' element={<Start />} />
-        <Route path='dorm' element={<Dorm />} />
+        <Route path='dorm/:id' element={<Dorm />} />
         <Route path='home/custom' element={<Custom />} />
         <Route path='home' element={<Home />} />
         <Route path='sort' element={<Sort />} />
