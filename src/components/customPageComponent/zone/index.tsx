@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ZoneButton from '../zoneButton';
 import './zone.css';
 
 const Zone = () => {
+  const dormName1 = 'เกกี';
+  const dormName2 = 'เกกี';
+  const dormName3 = 'เกกี';
   return (
     <div className='zone_button-container'>
-      <button className='zone_button keki'>เกกี</button>
-      <button className='zone_button rnp'>RNP</button>
-      <button className='zone_button soihormai'>ซอยหอใหม่</button>
+      <ZoneButton />
+      <ZoneButton />
+      <ZoneButton />
     </div>
   );
 };
