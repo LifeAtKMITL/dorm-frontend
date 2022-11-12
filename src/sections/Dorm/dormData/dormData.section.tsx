@@ -7,11 +7,14 @@ import { ReviewModalComponent } from 'components';
 
 import './dormData.css';
 
+// prop dorm picture from card
+
+
+//prop open, close Modal
 export type functionProp = {
   open: boolean;
   setOpen: (open: boolean) => void;
 };
-
 
 export const DormDataSection: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -45,6 +48,7 @@ export const DormDataSection: React.FC = () => {
         </div>
 
         <div className='Box-pic'>
+          {/* change to picture prop */}
           <img src={logoImg} />
         </div>
       </Box>

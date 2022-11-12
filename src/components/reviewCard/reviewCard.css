@@ -10,12 +10,17 @@
 
 .Box-Review-header {
   display: flex;
+  align-items: center;
 }
 
-.Box-Review-header h4 {
+/* .Box-Review-header{
   margin-right: 30px;
+} */
+
+.Username {
+  margin-left: 10px;
 }
 
 .User-image {
-  margin: 10px;
+  width: 20%;
 }
