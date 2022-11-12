@@ -3,33 +3,29 @@ import React, { useEffect, useState } from 'react';
 import Rating from '@mui/material/Rating';
 import './reviewModal.css';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 // prop from dormData (open/close Modal)
 import { functionProp } from 'sections';
 
-// prop(dormId) from card
+// authToken
+const acceessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUwZjk1NTdiMDlmMTI0N2U0ZGUyYmYzYjFjYjcyNjc5ZSIsImlhdCI6MTY2ODAwMTgyOSwiZXhwIjoxNjcwNTkzODI5fQ.hj-m3KVnEx6hwPjJGOqkAnBZIFocOB8B8Ey_j5uuoTA';
 
+const Url = 'https://life-at-kmitl-backend-production.up.railway.app';
 
-
+const authAxios = axios.create({
+  baseURL: Url,
+  headers: {
+    Authorization: `Bearer ${acceessToken}`
+  }
+})
 
 export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
   //state
-  const [dormId, setDormId] = useState('63660db5bd6516697b9cde60');
+  const { id } = useParams();
   
   const [textReview, setTextReview] = useState('');
   const [star, setStar] = useState<number | null>(3);
-
-//   useEffect(() => {
-//     axios
-//     .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/${dormId}`)
-//     .then(res => {
-//       console.log(res);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//     });
-// }, []);
-
 
   //function
   const onChange = (event: { target: any; }) => {
@@ -39,34 +35,34 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
 
   function onSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
-    // post textReview
+
+    //posted textReview
     console.log('review : ', textReview);
-    axios
-    .post(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/create`, {
-      dormId: dormId,
+    authAxios
+    .post(`/dorm/review/create`, {
+      dormId: id,
       textReview: textReview,
     })
     .then(res => {
-      console.log("Post textReview : ", res);
+      console.log("Posted textReview : ", res);
     })
     .catch(err => {
       console.log(err);
     });
 
-    //post star
+    //posted star
     console.log('star : ', star);
-    axios
-    .post(`https://life-at-kmitl-backend-production.up.railway.app/dorm/score`, {
-      dormId: dormId,
-      star: star,
+    authAxios
+    .put(`/dorm/score`, {
+      dormId: id,
+      score: star,
     })
     .then(res => {
-      console.log("Post star : ", res);
+      console.log("Posted star : ", res);
     })
     .catch(err => {
       console.log(err);
     });
-
 
     setTextReview('');
     setStar(3);

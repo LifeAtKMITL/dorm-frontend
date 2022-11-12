@@ -1,9 +1,15 @@
+.Dorm-header {
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
 .Box-Review {
-    margin: 10px;
-    padding : 10px;
-    padding-bottom: 25px;
-    background-color: rgb(255, 255, 255, 0.1);
-    border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: white;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 25px;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
 }
