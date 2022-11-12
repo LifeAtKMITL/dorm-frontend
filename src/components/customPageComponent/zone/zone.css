@@ -1,0 +1,11 @@
+.zone_button-container {
+  display: flex;
+  background-color: gray;
+}
+
+.zone_button {
+  margin: 10px 30px;
+  width: 70px;
+  height: 40px;
+  background-color: red;
+}
