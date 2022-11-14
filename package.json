@@ -11,6 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@line/liff": "^2.21.3",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.13",
@@ -25,6 +30,7 @@
     "react-native-flatlist-slider": "^1.0.6",
     "react-router-dom": "^6.4.2",
     "react-swipeable": "^7.0.0",
+    "react-toastify": "^9.1.1",
     "swiper": "^8.4.4",
     "uuid": "^9.0.0",
     "vite-tsconfig-paths": "^3.5.1"
