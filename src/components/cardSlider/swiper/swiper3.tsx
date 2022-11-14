@@ -17,7 +17,7 @@ import { CardComponent } from '../card/card.component';
 const Swipe3 = (props: any) => {
   const { testData } = props;
   const data = testData;
-  console.log('swdata = ', data);
+  // console.log('swdata = ', data);
   return (
     <>
       <Swiper

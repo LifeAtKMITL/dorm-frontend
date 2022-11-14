@@ -11,7 +11,7 @@ const SliderComponent3 = (props: any) => {
   // const [data, setData] = useState(props);
   const { testData } = props;
   const data = testData;
-  console.log('scData = ', data);
+  // console.log('scData = ', data);
   return (
     <div className='Slider'>
       <Swipe3 testData={data} />

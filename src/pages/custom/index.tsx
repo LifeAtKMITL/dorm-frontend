@@ -15,12 +15,62 @@ const getAllDorm = 'https://life-at-kmitl-backend-production.up.railway.app/dorm
 
 const Custom = () => {
   const [dorm, setDorm] = useState([]);
+  const temp = {
+    monthly: [0, 20000],
+    zone: [],
+    facilities: [
+      {
+        utl: 'aircon',
+        value: false,
+      },
+      {
+        utl: 'furniture',
+        value: false,
+      },
+      {
+        utl: 'waterHeater',
+        value: false,
+      },
+      {
+        utl: 'fan',
+        value: false,
+      },
+      {
+        utl: 'TV',
+        value: false,
+      },
+      {
+        utl: 'fridge',
+        value: false,
+      },
+      {
+        utl: 'parking',
+        value: false,
+      },
+      {
+        utl: 'freeWifi',
+        value: false,
+      },
+      {
+        utl: 'keyCard',
+        value: false,
+      },
+      {
+        utl: 'CCTV',
+        value: false,
+      },
+      {
+        utl: 'luandry',
+        value: false,
+      },
+    ],
+  };
   useEffect(() => {
-    axios.post(getAllDorm).then((res) => {
+    axios.post(baseURL, temp).then((res) => {
       console.log('res =', res.data);
       setSendData(res.data);
     });
-  });
+  }, []);
 
   // Zone
   // const zone: any = [];
@@ -47,6 +97,7 @@ const Custom = () => {
   // };
   let monthly = 0;
   const pull_range = (data: any) => {
+    console.log('init');
     let priceRange = data;
     monthly = priceRange;
     console.log(monthly);
@@ -104,16 +155,15 @@ const Custom = () => {
     let temp = data;
     for (let i = 0; i < facilities.length; i++) {
       if (facilities[i].utl == temp) {
-        facilities[i].value = !facilities[i].value;
+        if (facilities[i].value == false) {
+          facilities[i].value = true;
+        } else {
+          facilities[i].value = false;
+        }
       }
     }
-    // console.log(facilities);
+    console.log(facilities);
   };
-
-  // test useffect
-  useEffect(() => {
-    console.log('test');
-  });
 
   // dataToSend
   const initialData = [
@@ -745,16 +795,20 @@ const Custom = () => {
   const [sendData, setSendData] = useState([]);
   console.log('sendData', sendData);
   function fetchData() {
-    const temp = {
-      monthly: monthly,
-      zone: zone,
-      facilities: facilities,
-    };
-    console.log('send =', temp);
-    axios.post(baseURL, temp).then((res) => {
-      console.log('res =', res.data);
-      setSendData(res.data);
-    });
+    if (zone.length == 0) {
+      alert('click at lease one zone');
+    } else {
+      const temp = {
+        monthly: monthly,
+        zone: zone,
+        facilities: facilities,
+      };
+      console.log('send =', temp);
+      axios.post(baseURL, temp).then((res) => {
+        console.log('res =', res.data);
+        setSendData(res.data);
+      });
+    }
   }
 
   return (
