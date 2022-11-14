@@ -86,7 +86,7 @@ const Custom = () => {
     }
     console.log(zone);
     setZone(zone);
-    fetchData();
+    // fetchData();
   };
 
   // price range
@@ -97,10 +97,10 @@ const Custom = () => {
   // };
   let monthly = 0;
   const pull_range = (data: any) => {
-    console.log('init');
     let priceRange = data;
     monthly = priceRange;
     console.log(monthly);
+    // fetchData();
   };
   // console.log(monthly);
 
@@ -151,18 +151,21 @@ const Custom = () => {
       value: false,
     },
   ];
+  const [fac, setFac] = useState(facilities);
   const pull_check = (data: any) => {
     let temp = data;
-    for (let i = 0; i < facilities.length; i++) {
-      if (facilities[i].utl == temp) {
-        if (facilities[i].value == false) {
-          facilities[i].value = true;
+    for (let i = 0; i < fac.length; i++) {
+      if (fac[i].utl == temp) {
+        if (fac[i].value == false) {
+          fac[i].value = true;
         } else {
-          facilities[i].value = false;
+          fac[i].value = false;
         }
       }
     }
-    console.log(facilities);
+    console.log(fac);
+    setFac(fac);
+    // fetchData();
   };
 
   // dataToSend
@@ -797,11 +800,12 @@ const Custom = () => {
   function fetchData() {
     if (zone.length == 0) {
       alert('click at lease one zone');
+      return;
     } else {
       const temp = {
         monthly: monthly,
         zone: zone,
-        facilities: facilities,
+        facilities: fac,
       };
       console.log('send =', temp);
       axios.post(baseURL, temp).then((res) => {

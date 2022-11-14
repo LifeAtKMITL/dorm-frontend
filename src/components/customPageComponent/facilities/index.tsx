@@ -1,5 +1,6 @@
 import React from 'react';
 import './facilities.css';
+
 import CheckBox from '../checkbox/index';
 
 const Facilities = (props: any) => {
@@ -41,41 +42,52 @@ const Facilities = (props: any) => {
     <div className='facilities-container'>
       <div className='facilities-border'>
         <div className='c1'>
-          <div onClick={aircon}>
-            <CheckBox name={'aircon'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={aircon} />
+            <span style={{ color: 'white' }}> aircon</span>
           </div>
-          <div onClick={furniture}>
-            <CheckBox name={'furniture'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={furniture} />
+            <span style={{ color: 'white' }}> furniture</span>
           </div>
-          <div onClick={waterHeater}>
-            <CheckBox name={'waterHeater'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={waterHeater} />
+            <span style={{ color: 'white' }}> waterHeater</span>
           </div>
-          <div onClick={fan}>
-            <CheckBox name={'fan'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={fan} />
+            <span style={{ color: 'white' }}> fan</span>
           </div>
-          <div onClick={TV}>
-            <CheckBox name={'TV'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={TV} />
+            <span style={{ color: 'white' }}> TV</span>
           </div>
-          <div onClick={fridge}>
-            <CheckBox name={'fridge'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={fridge} />
+            <span style={{ color: 'white' }}> fridge</span>
           </div>
         </div>
 
         <div className='c2'>
-          <div onClick={parking}>
-            <CheckBox name={'parking'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={parking} />
+            <span style={{ color: 'white' }}> parking</span>
           </div>
-          <div onClick={freeWifi}>
-            <CheckBox name={'freeWifi'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={freeWifi} />
+            <span style={{ color: 'white' }}> freeWifi</span>
           </div>
-          <div onClick={keyCard}>
-            <CheckBox name={'keyCard'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={keyCard} />
+            <span style={{ color: 'white' }}> keyCard</span>
           </div>
-          <div onClick={CCTV}>
-            <CheckBox name={'CCTV'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={CCTV} />
+            <span style={{ color: 'white' }}> CCTV</span>
           </div>
-          <div onClick={luandry}>
-            <CheckBox name={'luandry'} />
+          <div>
+            <input type='checkbox' className='cb' onClick={luandry} />
+            <span style={{ color: 'white' }}> luandry</span>
           </div>
         </div>
       </div>
