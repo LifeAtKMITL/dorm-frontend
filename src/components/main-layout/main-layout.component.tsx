@@ -21,3 +21,17 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     </Box>
   );
 };
+
+export const MainLayout2: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <Box>
+      <AppBar>
+        <NavBar />
+      </AppBar>
+      <Box style={{ background: 'black' }}>
+        <Toolbar />
+        {children}
+      </Box>
+    </Box>
+  );
+};

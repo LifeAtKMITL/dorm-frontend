@@ -7,12 +7,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-import { logoImg } from 'assets';
 import { Link } from 'react-router-dom';
 
-// export type CardProps = {
-//     content: React.ReactNode;
-//   };
 
 export const CardComponent = (props: any) => {
   const { id, imgPath, dormName, rangePrice1, rangePrice2 } = props;
@@ -26,9 +22,7 @@ export const CardComponent = (props: any) => {
               {dormName}
             </Typography>
             <Typography variant='body2' color='text.secondary'>
-              {rangePrice1}-{rangePrice2} <br />
-              - Air Con <br />
-              - TV <br />
+              Price : {rangePrice1}-{rangePrice2} <br />
             </Typography>
           </CardContent>
         </CardActionArea>
