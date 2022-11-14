@@ -5,8 +5,9 @@ import './reviewModal.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-// prop from dormData (open/close Modal)
-import { functionProp } from 'sections';
+// prop from dormData (open/close Modal, Alert)
+import { FunctionProp } from 'sections';
+import { Alert, Snackbar } from '@mui/material';
 
 // authToken
 const acceessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUwZjk1NTdiMDlmMTI0N2U0ZGUyYmYzYjFjYjcyNjc5ZSIsImlhdCI6MTY2ODAwMTgyOSwiZXhwIjoxNjcwNTkzODI5fQ.hj-m3KVnEx6hwPjJGOqkAnBZIFocOB8B8Ey_j5uuoTA';
@@ -20,9 +21,12 @@ const authAxios = axios.create({
   }
 })
 
-export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
+export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: FunctionProp) => {
   //state
   const { id } = useParams();
+  const [openAlertFailed, setOpenAlertFailed] = React.useState(false);
+  const handleOpenAlertFailed = () => setOpenAlertFailed(true);
+  const handleCloseAlertFailed = () => setOpenAlertFailed(false);
   
   const [textReview, setTextReview] = useState('');
   const [star, setStar] = useState<number | null>(3);
@@ -36,7 +40,7 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
   function onSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
 
-    //posted textReview
+    // posted textReview
     console.log('review : ', textReview);
     authAxios
     .post(`/dorm/review/create`, {
@@ -50,7 +54,7 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
       console.log(err);
     });
 
-    //posted star
+    // posted star
     console.log('star : ', star);
     authAxios
     .put(`/dorm/score`, {
@@ -66,7 +70,8 @@ export const ReviewModalComponent = ({open, setOpen}: functionProp) => {
 
     setTextReview('');
     setStar(3);
-    setOpen(false)
+    setOpen(false);
+    setOpenAlert(true);
   }
 
     return (

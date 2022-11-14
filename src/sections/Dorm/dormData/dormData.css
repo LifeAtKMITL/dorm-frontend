@@ -36,3 +36,26 @@
   object-fit: cover;
   border-radius: 12px;
 }
+
+.Description {
+  margin: 15px;
+}
+
+.Description p {
+  font-weight: bold;
+}
+
+.Facility-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  color: white;
+}
+
+.Facility-grid-item {
+  margin: 10px;
+  padding : 20px;
+  padding-bottom: 25px;
+  justify-content: center;
+  text-align: center;
+}
