@@ -1,0 +1,16 @@
+.Go-Button-Container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.go-btn {
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: #15cd64;
+  color: black;
+  font-size: large;
+}

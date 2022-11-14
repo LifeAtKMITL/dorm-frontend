@@ -30,7 +30,11 @@
     "react-native-flatlist-slider": "^1.0.6",
     "react-router-dom": "^6.4.2",
     "react-swipeable": "^7.0.0",
+
+    "sass": "^1.56.1",
+
     "react-toastify": "^9.1.1",
+
     "swiper": "^8.4.4",
     "uuid": "^9.0.0",
     "vite-tsconfig-paths": "^3.5.1"
