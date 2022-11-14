@@ -1,3 +1,4 @@
+import Loading from 'components/loading';
 import NavBar from 'components/navbar';
 import StartPageContent from 'components/startPageContent';
 import React from 'react';
@@ -8,6 +9,7 @@ const Start = () => {
     <div className='start-container'>
       <NavBar />
       <StartPageContent />
+      {/* <Loading></Loading> */}
     </div>
   );
 };

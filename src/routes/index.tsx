@@ -1,3 +1,4 @@
+import Loading from 'components/loading';
 import React, { lazy, Suspense } from 'react';
 import { Routes as Router, Route } from 'react-router-dom';
 
@@ -9,7 +10,7 @@ const Sort = lazy(() => import('pages/sort/sort'));
 
 const Routes = () => {
   return (
-    <Suspense fallback={<>Loading...</>}>
+    <Suspense fallback={<Loading/>}>
       <Router>
         <Route path='/' element={<Start />} />
         <Route path='dorm/:id' element={<Dorm />} />

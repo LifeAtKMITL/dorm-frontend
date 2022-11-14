@@ -42,37 +42,42 @@ export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: F
 
     // posted textReview
     console.log('review : ', textReview);
-    authAxios
-    .post(`/dorm/review/create`, {
-      dormId: id,
-      textReview: textReview,
-    })
-    .then(res => {
-      console.log("Posted textReview : ", res);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
-    // posted star
-    console.log('star : ', star);
-    authAxios
-    .put(`/dorm/score`, {
-      dormId: id,
-      score: star,
-    })
-    .then(res => {
-      console.log("Posted star : ", res);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-
-    setTextReview('');
-    setStar(3);
-    setOpen(false);
-    setOpenAlert(true);
-  }
+    if (textReview == '') {
+      alert('Please fill review box  ☜(ﾟヮﾟ☜)');
+      return;
+    }
+    else {
+      authAxios
+      .post(`/dorm/review/create`, {
+        dormId: id,
+        textReview: textReview,
+      })
+      .then(res => {
+        console.log("Posted textReview : ", res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  
+      // posted star
+      console.log('star : ', star);
+      authAxios
+      .put(`/dorm/score`, {
+        dormId: id,
+        score: star,
+      })
+      .then(res => {
+        console.log("Posted star : ", res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  
+      setTextReview('');
+      setStar(3);
+      setOpen(false);
+      setOpenAlert(true);
+    }}
 
     return (
       <div className='Modal'>
