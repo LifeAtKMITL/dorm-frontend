@@ -27,7 +27,7 @@ export const DormReviewSection = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [posts]);
 
   return (
     <div>
