@@ -42,52 +42,127 @@ const Facilities = (props: any) => {
     <div className='facilities-container'>
       <div className='facilities-border'>
         <div className='c1'>
-          <div>
-            <input type='checkbox' className='cb' onClick={aircon} />
-            <span style={{ color: 'white' }}> aircon</span>
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={aircon} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              aircon
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={furniture} />
-            <span style={{ color: 'white' }}> furniture</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={furniture} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              furniture
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={waterHeater} />
-            <span style={{ color: 'white' }}> waterHeater</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={waterHeater} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              waterHeater
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={fan} />
-            <span style={{ color: 'white' }}> fan</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={fan} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              fan
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={TV} />
-            <span style={{ color: 'white' }}> TV</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={TV} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              TV
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={fridge} />
-            <span style={{ color: 'white' }}> fridge</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={fridge} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              fridge
+            </span>
           </div>
         </div>
 
         <div className='c2'>
-          <div>
-            <input type='checkbox' className='cb' onClick={parking} />
-            <span style={{ color: 'white' }}> parking</span>
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={parking} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              parking
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={freeWifi} />
-            <span style={{ color: 'white' }}> freeWifi</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={freeWifi} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              freeWifi
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={keyCard} />
-            <span style={{ color: 'white' }}> keyCard</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={keyCard} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              keyCard
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={CCTV} />
-            <span style={{ color: 'white' }}> CCTV</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={CCTV} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              CCTV
+            </span>
           </div>
-          <div>
-            <input type='checkbox' className='cb' onClick={luandry} />
-            <span style={{ color: 'white' }}> luandry</span>
+
+          <div className='testBox'>
+            <label className='switch'>
+              <input type='checkbox' className='cb' onClick={luandry} />
+              <span className='slider round'></span>
+            </label>
+            <span className='testSpan' style={{ color: 'white' }}>
+              {' '}
+              luandry
+            </span>
           </div>
         </div>
       </div>
