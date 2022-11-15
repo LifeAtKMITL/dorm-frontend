@@ -15,18 +15,6 @@ const NavBarBack = () => {
               <span className='font-link'>{'< BACK'}</span>
             </button>
           </a>
-          <div className='logoX'>
-            <div className='logo-picX'>
-              <a href='/' className='logo-linkX'>
-                <img className='logo-imgX' src={logo} alt='' />
-              </a>
-            </div>
-            {/* <div className='separateLogoLine'></div> */}
-            <div className='text-sm text-white font-link mx-2'>X</div>
-            <div className='project-nameX'>
-              <p className='font-link text-[#15cd64] text-lg'>DOOHOR</p>
-            </div>
-          </div>
         </div>
       </nav>
     </div>
