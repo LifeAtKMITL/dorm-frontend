@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import axios from 'axios';
 
@@ -12,8 +12,13 @@ export const DormReviewSection = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const { id } = useParams();
 
+  const isInitialMount = useRef(true);
+
   useEffect(() => {
-    axios
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      axios
       .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/${id}`)
       .then((res) => {
         console.log(res);
@@ -27,7 +32,8 @@ export const DormReviewSection = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [posts]);
+    }
+  });
 
   return (
     <div>
