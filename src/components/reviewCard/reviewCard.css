@@ -1,6 +1,7 @@
 .Box-Review {
   height: auto;
   margin: 10px;
+  margin-bottom: 0px;
   padding: 15px;
   padding-bottom: 20px;
   background-color: rgb(255, 255, 255, 0.1);

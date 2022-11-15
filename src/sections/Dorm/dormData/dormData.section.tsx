@@ -34,6 +34,7 @@ export const DormDataSection: React.FC = () => {
   const { id } = useParams();
 
   //set dorm data
+  const [posts, setPosts] = useState<any[]>([]);
   const [dormName, setDormName] = useState('');
   const [dormImage, setDormImage] = useState('');
   const [dormScore, setDormScore] = useState<number | null>(0);
@@ -48,6 +49,7 @@ export const DormDataSection: React.FC = () => {
       .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/${id}`)
       .then((res) => {
         console.log(res);
+        setPosts(res.data);
         setDormName(res.data.name);
         setDormImage(res.data.imagePath[0]);
         setDormScore(res.data.avgScore);
@@ -63,7 +65,7 @@ export const DormDataSection: React.FC = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [dormScore]);
+  }, [posts]);
 
   return (
     <div className='Box-zone'>
