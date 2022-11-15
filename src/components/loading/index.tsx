@@ -6,7 +6,7 @@ const Loading = () => {
   return (
     <div className='Background'>
       <div className='container'>
-        <div className='Box'>
+        <div className='Box-load'>
           <img className='Load-img' src={logoImg}></img>
         Loading...
         </div>
