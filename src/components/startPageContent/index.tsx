@@ -31,7 +31,7 @@ const StartPageContent = () => {
           </div>
         </div>
         <button className='btn' role='button' onClick={navigateToCustomPage}>
-          <p className='content-font'>Get Started</p>
+          <p className='content-font extra'>Get Started</p>
         </button>
       </div>
     </div>

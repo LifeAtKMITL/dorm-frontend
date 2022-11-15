@@ -11,6 +11,8 @@ const baseURL = 'https://life-at-kmitl-backend-production.up.railway.app/dorm/fi
 export const SliderComponent = () => {
   const [data, setData] = useState([]);
 
+  const [btn, setBtn] = useState('RNP');
+
   useEffect(() => {
     axios
       .post(baseURL, {
@@ -123,6 +125,8 @@ export const SliderComponent = () => {
       .then((res) => {
         setData(res.data);
       });
+
+    setBtn('keki');
   }
 
   function rnp() {
@@ -180,6 +184,7 @@ export const SliderComponent = () => {
       .then((res) => {
         setData(res.data);
       });
+    setBtn('RNP');
   }
 
   function soiHorMai() {
@@ -237,6 +242,7 @@ export const SliderComponent = () => {
       .then((res) => {
         setData(res.data);
       });
+    setBtn('soiHorMai');
   }
 
   return (
@@ -246,14 +252,20 @@ export const SliderComponent = () => {
         {/* {Name} */}
       </div>
       <div className='body'>
-        <ul className='list_link'>
-          <button className='zoneBtn' onClick={rnp}>
+        <ul className='list_link '>
+          <button
+            className={`px-3 py-1 rounded-full mr-2 ${btn === 'RNP' ? 'bg-green-500 text-black' : ''}`}
+            onClick={rnp}
+          >
             RNP
           </button>
-          <button className='zoneBtn' onClick={keki}>
+          <button className={` px-3 py-1 rounded-full mr-2 ${btn === 'keki' ? 'bg-green-500' : ''}`} onClick={keki}>
             เกกี
           </button>
-          <button className='zoneBtn' onClick={soiHorMai}>
+          <button
+            className={` px-3 py-1 rounded-full mr-2 ${btn === 'soiHorMai' ? 'bg-green-500' : ''}`}
+            onClick={soiHorMai}
+          >
             ซอยหอใหม่
           </button>
         </ul>

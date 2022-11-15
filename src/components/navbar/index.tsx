@@ -20,9 +20,10 @@ const NavBar = () => {
                 <img className='logo-img' src={logo} alt='' />
               </a>
             </div>
-            <div className='separateLogoLine'></div>
+            {/* <div className='separateLogoLine'></div> */}
+            <div className='text-sm text-white font-link mx-2'>X</div>
             <div className='project-name'>
-              <p className='font-link'>DOOHOR</p>
+              <p className='font-link text-[#15cd64] text-lg'>DOOHOR</p>
             </div>
           </div>
           <div className='menu-bars' onClick={showSidebar}>
