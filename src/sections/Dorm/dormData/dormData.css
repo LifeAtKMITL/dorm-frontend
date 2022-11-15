@@ -4,6 +4,11 @@
   margin-top: 15px;
 }
 
+.Dorm-name {
+  font-size: 36px;
+  font-weight: bold;
+}
+
 .Button-review {
   background-color: #15cd64; /* Green */
   border: none;

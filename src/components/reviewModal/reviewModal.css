@@ -35,9 +35,11 @@
   border-bottom-right-radius: 12px;
 }
 
-/* form {
+/* form */
 
-} */
+.Textarea {
+  color: black;
+}
 
 .Button-submit {
   background-color: #15cd64; /* Green */

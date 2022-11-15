@@ -32,9 +32,11 @@ export const DormReviewSection = () => {
   return (
     <div>
       <div className='Box-zone'>
-        <Box py={4}>
+        <Box>
           <div className='Dorm-header'>
-            <h1>Review</h1>
+            <h1 className='Dorm-review'>
+              Review
+            </h1>
           </div>
           {posts.map((post) => (
             <ReviewCard image={post.imagePath} name={post.username} content={post.textReview} />

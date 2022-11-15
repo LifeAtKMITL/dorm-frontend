@@ -8,7 +8,10 @@ const Loading = () => {
       <div className='container'>
         <div className='Box-load'>
           <img className='Load-img' src={logoImg}></img>
-        Loading...
+          <div className="spinner-container">
+            <div className="loading-spinner">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -16,3 +19,8 @@ const Loading = () => {
 };
 
 export default Loading;
+
+
+
+
+    

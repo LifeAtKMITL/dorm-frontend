@@ -37,8 +37,11 @@ export const Swipe2 = (props: any) => {
           return (
             <SwiperSlide key={element.name}>
               <CardComponent
+                id={element._id}
                 imgPath={element.imagePath[0]}
                 dormName={element.name}
+                dormScore={element.avgScore}
+                dormTel={element.tel}
                 rangePrice1={element.rangePrice[0]}
                 rangePrice2={element.rangePrice[1]}
               />

@@ -1,4 +1,5 @@
 .Box-Review {
+  height: auto;
   margin: 10px;
   padding: 15px;
   padding-bottom: 20px;
@@ -6,16 +7,18 @@
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: white;
+  display: block;
 }
 
 .Box-Review-header {
   display: flex;
   align-items: center;
+  white-space: pre-line;
 }
 
-/* .Box-Review-header{
-  margin-right: 30px;
-} */
+.Content {
+  overflow-wrap: break-word;
+}
 
 .Username {
   margin-left: 10px;

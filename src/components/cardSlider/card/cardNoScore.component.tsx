@@ -10,7 +10,7 @@ import { CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
-export const CardComponent = (props: any) => {
+export const CardComponentNoScore = (props: any) => {
   const { id, imgPath, dormName, dormScore, dormTel, rangePrice1, rangePrice2 } = props;
   return (
     <Link to={`/dorm/${id}`}>
@@ -23,7 +23,6 @@ export const CardComponent = (props: any) => {
               {dormName}
             </Typography>
             <Typography variant='body1' color='text.secondary'>
-              <Rating name='read-only' value={dormScore} precision={0.5} readOnly size='small' /> <br/>
               Start at : {rangePrice1} ฿ <br/>
               Contact : {dormTel} <br/>
             </Typography>

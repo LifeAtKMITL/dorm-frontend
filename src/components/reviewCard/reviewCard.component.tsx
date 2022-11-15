@@ -18,7 +18,9 @@ export const ReviewCard = ({ image, name, content }: ReviewProp) => {
         <img className='User-image' src={image}></img>
         <h2 className='Username'>{name}</h2>
       </div>
-      <p>{content}</p>
+      <div className='Content'>
+        {content}
+      </div>
     </div>
   );
 };

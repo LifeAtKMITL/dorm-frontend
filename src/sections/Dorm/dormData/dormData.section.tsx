@@ -67,7 +67,7 @@ export const DormDataSection: React.FC = () => {
 
   return (
     <div className='Box-zone'>
-      <Box py={4}>
+      <Box py={3}>
         <div>
           <Modal
             open={open}
@@ -86,7 +86,7 @@ export const DormDataSection: React.FC = () => {
             </Alert>
           </Snackbar>
           <Rating name='read-only' value={dormScore} precision={0.5} readOnly size='large' />
-          <h1>
+          <h1 className='Dorm-name'>
             {dormName}
             <button className='Button-review' onClick={handleOpen}>
               REVIEW
@@ -100,7 +100,7 @@ export const DormDataSection: React.FC = () => {
 
         <div className='Description'>
           <p style={{color: '#15CD64'}}>Description</p>
-          Address : {dormAddr} <br></br>
+          Address : {dormAddr}<br></br>
           Telephone : {dormTel} <br></br>
           Price : {dormMinPrice} - {dormMaxPrice} ฿ <br></br>
         </div>
