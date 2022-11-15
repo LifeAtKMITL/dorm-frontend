@@ -89,6 +89,7 @@ export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: F
             <label>Review</label>
             <br />
             <textarea
+            className='Textarea'
               name='textReview'
               rows={3}
               cols={25}

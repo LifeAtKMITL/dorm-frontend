@@ -9,6 +9,7 @@ const Start = () => {
     <div className='start-container'>
       <NavBar />
       <StartPageContent />
+      {/* <Loading></Loading> */}
     </div>
   );
 };

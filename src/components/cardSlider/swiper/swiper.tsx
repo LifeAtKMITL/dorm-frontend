@@ -12,12 +12,12 @@ import 'swiper/css/zoom';
 
 // import required modules
 import { Pagination, Zoom } from 'swiper';
-import { CardComponent } from '../card/card.component';
+import { CardComponentNoScore } from '../card/cardNoScore.component';
 
 export const Swipe = (props: any) => {
   const { testData } = props;
   const data = testData;
-  console.log(data);
+  console.log('data = ', data);
   return (
     <>
       <Swiper
@@ -36,10 +36,11 @@ export const Swipe = (props: any) => {
         {data.map((element: any) => {
           return (
             <SwiperSlide key={element.name}>
-              <CardComponent
+              <CardComponentNoScore
                 id={element._id}
                 imgPath={element.imagePath[0]}
                 dormName={element.name}
+                dormTel={element.tel}
                 rangePrice1={element.rangePrice[0]}
                 rangePrice2={element.rangePrice[1]}
               />
