@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import Rating from '@mui/material/Rating';
 import './reviewModal.css';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from 'utils/axios';
 import { useParams } from 'react-router-dom';
 
 // prop from dormData (open/close Modal, Alert)
@@ -11,14 +12,14 @@ import { FunctionProp } from 'sections';
 // authToken
 const acceessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUwZjk1NTdiMDlmMTI0N2U0ZGUyYmYzYjFjYjcyNjc5ZSIsImlhdCI6MTY2ODAwMTgyOSwiZXhwIjoxNjcwNTkzODI5fQ.hj-m3KVnEx6hwPjJGOqkAnBZIFocOB8B8Ey_j5uuoTA';
 
-const Url = 'https://life-at-kmitl-backend-production.up.railway.app';
+// const Url = 'https://life-at-kmitl-backend-production.up.railway.app';
 
-const authAxios = axios.create({
-  baseURL: Url,
-  headers: {
-    Authorization: `Bearer ${acceessToken}`
-  }
-})
+// const authAxios = axios.create({
+//   baseURL: Url,
+//   headers: {
+//     Authorization: `Bearer ${acceessToken}`
+//   }
+// })
 
 export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: FunctionProp) => {
   //state
@@ -43,7 +44,7 @@ export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: F
       return;
     }
     else {
-      authAxios
+      axios
       .post(`/dorm/review/create`, {
         dormId: id,
         textReview: textReview,
@@ -57,7 +58,7 @@ export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: F
   
       // posted star
       console.log('star : ', star);
-      authAxios
+      axios
       .put(`/dorm/score`, {
         dormId: id,
         score: star,

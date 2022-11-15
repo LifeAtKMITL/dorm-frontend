@@ -10,7 +10,8 @@ import { ReviewModalComponent } from 'components';
 import { useParams } from 'react-router-dom';
 
 import './dormData.css';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from 'utils/axios';
 import { DormReviewSection } from '../dormReview/dormReview.section';
 
 //prop open, close Modal, Alert
@@ -42,10 +43,12 @@ export const DormDataSection: React.FC = () => {
   const [dormMinPrice, setDormMinPrice] = useState('');
   const [dormMaxPrice, setDormMaxPrice] = useState('');
   const [dormFacilities, setDormFacilities] = useState<any[]>([]);
+  const [dormWaterBills, setDormWaterBills] = useState<number>(0);
+  const [dormElectricBills, setDormElectricBills] = useState<number>(0);
 
   useEffect(() => {
       axios
-        .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/${id}`)
+        .get(`/dorm/${id}`)
         .then((res) => {
           console.log(res);
           setDormName(res.data.name);
@@ -56,6 +59,8 @@ export const DormDataSection: React.FC = () => {
           setDormMinPrice(res.data.rangePrice[0]);
           setDormMaxPrice(res.data.rangePrice[1]);
           setDormFacilities(res.data.facilities);
+          setDormWaterBills(res.data.bills.waterBill);
+          setDormElectricBills(res.data.bills.electricityBill);
 
           console.log('Facility', dormFacilities);
           console.log('AVGscore', dormScore);
@@ -106,8 +111,10 @@ export const DormDataSection: React.FC = () => {
         <div className='Description'>
           <p style={{ color: '#15CD64' }}>Description</p>
           Address : {dormAddr}<br></br>
-          Telephone : {dormTel} <br></br>
           Price : {dormMinPrice} - {dormMaxPrice} ฿ <br></br>
+          Water Bills :  {dormWaterBills}<br></br>
+          Electricity Bills :  {dormElectricBills}<br></br>
+          Telephone : {dormTel} <br></br>
         </div>
         <div className='Description'>
           <p style={{ color: '#15CD64' }}>Facilities</p>

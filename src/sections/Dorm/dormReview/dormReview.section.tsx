@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from 'utils/axios';
 
 import './dormReview.css';
 import { ReviewCard } from 'components/reviewCard/reviewCard.component';
@@ -16,7 +17,7 @@ export const DormReviewSection = ({ open, setOpen, openAlert, setOpenAlert }: Fu
 
   useEffect(() => {
     axios
-      .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/${id}`)
+      .get(`/dorm/review/${id}`)
       .then((res) => {
         console.log(res);
         console.log(res.data);
