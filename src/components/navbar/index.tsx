@@ -22,7 +22,7 @@ const NavBar = () => {
             </div>
             <div className='separateLogoLine'></div>
             <div className='project-name'>
-              <p className='font-link'>DOOHEE</p>
+              <p className='font-link'>DOOHOR</p>
             </div>
           </div>
           <div className='menu-bars' onClick={showSidebar}>
