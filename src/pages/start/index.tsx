@@ -7,9 +7,8 @@ import './start.css';
 const Start = () => {
   return (
     <div className='start-container'>
-      {/* <NavBar />
-      <StartPageContent /> */}
-      <Loading></Loading>
+      <NavBar />
+      <StartPageContent />
     </div>
   );
 };
