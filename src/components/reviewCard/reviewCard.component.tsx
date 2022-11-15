@@ -3,6 +3,8 @@ import Rating from '@mui/material/Rating';
 import './reviewCard.css';
 
 type ReviewProp = {
+  //id
+  id: string,
   // image
   image: string,
   // username
@@ -11,7 +13,7 @@ type ReviewProp = {
   content: string;
 };
 
-export const ReviewCard = ({ image, name, content }: ReviewProp) => {
+export const ReviewCard = ({ id, image, name, content }: ReviewProp) => {
   return (
     <div className='Box-Review'>
       <div className='Box-Review-header'>

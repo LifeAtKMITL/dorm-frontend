@@ -6,19 +6,16 @@ import './dormReview.css';
 import { ReviewCard } from 'components/reviewCard/reviewCard.component';
 import { useParams } from 'react-router-dom';
 
+// prop from dormData (open/close Modal, Alert)
+import { FunctionProp } from 'sections';
 
-
-export const DormReviewSection = () => {
+export const DormReviewSection = ({ open, setOpen, openAlert, setOpenAlert }: FunctionProp) => {
+  //state
   const [posts, setPosts] = useState<any[]>([]);
   const { id } = useParams();
 
-  const isInitialMount = useRef(true);
-
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
-      axios
+    axios
       .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/review/${id}`)
       .then((res) => {
         console.log(res);
@@ -32,20 +29,18 @@ export const DormReviewSection = () => {
       .catch((err) => {
         console.log(err);
       });
-    }
-  });
+  }, [openAlert]);
 
+  console.log("ReSec", open, openAlert);
   return (
     <div>
       <div className='Box-zone'>
         <Box>
           <div className='Dorm-header'>
-            <h1 className='Dorm-review'>
-              Review
-            </h1>
+            <h1 className='Dorm-review'>Review</h1>
           </div>
           {posts.map((post) => (
-            <ReviewCard image={post.imagePath} name={post.username} content={post.textReview} />
+            <ReviewCard id={post._id} image={post.imagePath} name={post.username} content={post.textReview} />
           ))}
         </Box>
       </div>

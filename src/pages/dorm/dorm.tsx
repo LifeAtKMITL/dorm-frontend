@@ -11,10 +11,14 @@ const sections = [
     sectionId: SectionIdEnum.dormData,
     component: <DormDataSection />,
   },
-  {
-    sectionId: SectionIdEnum.dormReview,
-    component: <DormReviewSection />,
-  },
+
+  // Dorm Section is in Dorm Data 
+  // Bcause of prop openAlert to update useEffect dependency
+
+  // {
+  //   sectionId: SectionIdEnum.dormReview,
+  //   component: <DormReviewSection />,
+  // },
 ]
 
 

@@ -24,7 +24,7 @@ export const CardComponent = (props: any) => {
             </Typography>
             <Typography variant='body1' color='text.secondary'>
               <Rating name='read-only' value={dormScore} precision={0.5} readOnly size='small' /> <br/>
-              Start at : {rangePrice1} ฿ <br/>
+              Price : {rangePrice1} - {rangePrice2} ฿ <br/>
               Contact : {dormTel} <br/>
             </Typography>
             </div>

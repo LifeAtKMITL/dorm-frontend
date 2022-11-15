@@ -11,6 +11,7 @@ import { useParams } from 'react-router-dom';
 
 import './dormData.css';
 import axios from 'axios';
+import { DormReviewSection } from '../dormReview/dormReview.section';
 
 //prop open, close Modal, Alert
 export type FunctionProp = {
@@ -33,7 +34,6 @@ export const DormDataSection: React.FC = () => {
   const { id } = useParams();
 
   //set dorm data
-  const [posts, setPosts] = useState<any[]>([]);
   const [dormName, setDormName] = useState('');
   const [dormImage, setDormImage] = useState('');
   const [dormScore, setDormScore] = useState<number | null>(0);
@@ -43,17 +43,11 @@ export const DormDataSection: React.FC = () => {
   const [dormMaxPrice, setDormMaxPrice] = useState('');
   const [dormFacilities, setDormFacilities] = useState<any[]>([]);
 
-  const isInitialMount = useRef(true);
-
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-    } else {
       axios
         .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/${id}`)
         .then((res) => {
           console.log(res);
-          setPosts(res.data);
           setDormName(res.data.name);
           setDormImage(res.data.imagePath[0]);
           setDormScore(res.data.avgScore);
@@ -69,12 +63,11 @@ export const DormDataSection: React.FC = () => {
         .catch((err) => {
           console.log(err);
         });
-    }
-  });
-
+  }, [openAlert]);
+  
   return (
     <div className='Box-zone'>
-      <Box py={3}>
+      <Box py={2.5}>
         <div>
           <Modal
             open={open}
@@ -112,8 +105,7 @@ export const DormDataSection: React.FC = () => {
 
         <div className='Description'>
           <p style={{ color: '#15CD64' }}>Description</p>
-          Address : {dormAddr}
-          <br></br>
+          Address : {dormAddr}<br></br>
           Telephone : {dormTel} <br></br>
           Price : {dormMinPrice} - {dormMaxPrice} ฿ <br></br>
         </div>
@@ -137,6 +129,7 @@ export const DormDataSection: React.FC = () => {
           </div>
         </div>
       </Box>
+      <DormReviewSection open={open} setOpen={setOpen} openAlert={openAlert} setOpenAlert={setOpenAlert} />
     </div>
   );
 };
