@@ -2,6 +2,7 @@ import React from 'react';
 import './startPageContent.css';
 
 import { useNavigate } from 'react-router-dom';
+import NavBar from 'components/navbar';
 
 const StartPageContent = () => {
   const navigate = useNavigate();
@@ -18,14 +19,15 @@ const StartPageContent = () => {
               <p className='content-font'>PREMIUEM WEB</p>
             </div>
             <div className='text2'>
-              <p className='content-font'>Unlimited</p>
-              <p className='content-font'>Transactions with</p>
-              <p className='content-font'>zero fees</p>
+              <p className='content-font'>The</p>
+              <p className='content-font'>World's best</p>
+              <p className='content-font'>Dormitory</p>
+              <p className='content-font'>website</p>
             </div>
             <div className='text3'>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quam molestiae labore, accusamus rem
-                vitae iste quibusdam similique
+                This website will help you find a hostel that meets your needs with our custom system, and also has lots
+                of real tenant reviews.
               </p>
             </div>
           </div>

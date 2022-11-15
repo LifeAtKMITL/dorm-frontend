@@ -14,13 +14,13 @@ export const DormCustomSection: React.FC = () => {
         <div className='Box'>
           {/* <Typography variant="h6">(Dorm-Custom)</Typography> */}
           <Typography variant='h2' mb={1} fontWeight={500}>
-            Custom Your Dorm
+            <p className='font-link'>Custom Your Dorm</p>
           </Typography>
           <Typography variant='h5' m={3}>
-            Filter your type of dorm
+            <p className='font-link'>Filter your type of dorm</p>
           </Typography>
           <button className='Button' onClick={navigateToCustomPage}>
-            GET STARTED
+            <p className='content-font gts'>GET STARTED</p>
           </button>
           {/* <Button variant="contained" onClick={navigateToCustomPage}>Get Started</Button>  */}
         </div>

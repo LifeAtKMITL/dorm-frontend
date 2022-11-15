@@ -9,6 +9,7 @@ import GoButton from 'components/customPageComponent/GoButton';
 import axios from 'axios';
 import Swipe3 from 'components/cardSlider/swiper/swiper3';
 import SliderComponent3 from 'components/cardSlider/cardSlider/cardSlider3.components';
+import NavBarBack from 'components/navbarBack';
 
 const baseURL = 'https://life-at-kmitl-backend-production.up.railway.app/dorm/filter';
 const getAllDorm = 'https://life-at-kmitl-backend-production.up.railway.app/dorm/';
@@ -817,6 +818,7 @@ const Custom = () => {
 
   return (
     <div className='Big-Container'>
+      <NavBarBack />
       <div className='custom-container'>
         <Zone func={pull_zone} />
         <RangeSlider func={pull_range} />

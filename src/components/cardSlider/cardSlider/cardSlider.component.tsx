@@ -248,22 +248,27 @@ export const SliderComponent = () => {
   return (
     <div className='Slider'>
       <div className='header'>
-        <h4>Zone</h4>
+        <div className='zoneTag'>
+          <p className='font-link zone'>ZONE</p>
+        </div>
         {/* {Name} */}
       </div>
       <div className='body'>
         <ul className='list_link '>
           <button
-            className={`px-3 py-1 rounded-full mr-2 ${btn === 'RNP' ? 'bg-green-500 text-black' : ''}`}
+            className={`font-link px-3 py-1 rounded-full mr-2 ${btn === 'RNP' ? 'bg-green-500 text-black' : ''}`}
             onClick={rnp}
           >
             RNP
           </button>
-          <button className={` px-3 py-1 rounded-full mr-2 ${btn === 'keki' ? 'bg-green-500' : ''}`} onClick={keki}>
+          <button
+            className={`font-link px-3 py-1 rounded-full mr-2 ${btn === 'keki' ? 'bg-green-500 text-black' : ''}`}
+            onClick={keki}
+          >
             เกกี
           </button>
           <button
-            className={` px-3 py-1 rounded-full mr-2 ${btn === 'soiHorMai' ? 'bg-green-500' : ''}`}
+            className={`font-link px-3 py-1 rounded-full mr-2 ${btn === 'soiHorMai' ? 'bg-green-500 text-black' : ''}`}
             onClick={soiHorMai}
           >
             ซอยหอใหม่
