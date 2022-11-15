@@ -23,7 +23,7 @@ export const CardComponentNoScore = (props: any) => {
               {dormName}
             </Typography>
             <Typography variant='body1' color='text.secondary'>
-              Start at : {rangePrice1} ฿ <br/>
+              Price : {rangePrice1} - {rangePrice2} ฿ <br/>
               Contact : {dormTel} <br/>
             </Typography>
             </div>
