@@ -7,6 +7,7 @@
   /* background-color: rgb(255, 255, 255, 0.1);
     border-radius: 12px; */
   background-color: black;
+  /* margin-bottom: 20px; */
 }
 
 .header {
@@ -36,4 +37,16 @@
   margin-left: 10px;
   width: 70px;
   height: 30px;
+}
+
+.zone {
+  color: #15cd64;
+}
+
+.zoneTag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #15cd64;
+  margin-bottom: 10px;
 }

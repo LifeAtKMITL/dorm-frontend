@@ -33,7 +33,9 @@ export const SliderComponent2 = () => {
   return (
     <div className='Slider'>
       <div className='header'>
-        <h4>Popular</h4>
+        <div className='zoneTag'>
+          <p className='font-link zone'>Popular</p>
+        </div>
       </div>
       <Swipe2 testData={data} />
     </div>
