@@ -1,9 +1,9 @@
 import { Box, Collapse, IconButton, Rating, Snackbar, Typography } from '@mui/material';
 import { logoImg } from 'assets';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Modal from '@mui/material/Modal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import Alert from '@mui/material/Alert';
 
 import { ReviewModalComponent } from 'components';
@@ -11,7 +11,6 @@ import { useParams } from 'react-router-dom';
 
 import './dormData.css';
 import axios from 'axios';
-
 
 //prop open, close Modal, Alert
 export type FunctionProp = {
@@ -44,28 +43,34 @@ export const DormDataSection: React.FC = () => {
   const [dormMaxPrice, setDormMaxPrice] = useState('');
   const [dormFacilities, setDormFacilities] = useState<any[]>([]);
 
-  useEffect(() => {
-    axios
-      .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/${id}`)
-      .then((res) => {
-        console.log(res);
-        setPosts(res.data);
-        setDormName(res.data.name);
-        setDormImage(res.data.imagePath[0]);
-        setDormScore(res.data.avgScore);
-        setDormAddr(res.data.address);
-        setDormTel(res.data.tel);
-        setDormMinPrice(res.data.rangePrice[0]);
-        setDormMaxPrice(res.data.rangePrice[1]);
-        setDormFacilities(res.data.facilities);
+  const isInitialMount = useRef(true);
 
-        console.log('Facility', dormFacilities);
-        console.log('AVGscore', dormScore);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [posts]);
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      axios
+        .get(`https://life-at-kmitl-backend-production.up.railway.app/dorm/${id}`)
+        .then((res) => {
+          console.log(res);
+          setPosts(res.data);
+          setDormName(res.data.name);
+          setDormImage(res.data.imagePath[0]);
+          setDormScore(res.data.avgScore);
+          setDormAddr(res.data.address);
+          setDormTel(res.data.tel);
+          setDormMinPrice(res.data.rangePrice[0]);
+          setDormMaxPrice(res.data.rangePrice[1]);
+          setDormFacilities(res.data.facilities);
+
+          console.log('Facility', dormFacilities);
+          console.log('AVGscore', dormScore);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  });
 
   return (
     <div className='Box-zone'>
@@ -82,8 +87,13 @@ export const DormDataSection: React.FC = () => {
           </Modal>
         </div>
         <div className='Dorm-header'>
-          <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'right' }} open={openAlert} autoHideDuration={2000} onClose={handleCloseAlert}>
-            <Alert onClose={handleCloseAlert} severity="success" sx={{ width: '60%' }} variant="filled">
+          <Snackbar
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            open={openAlert}
+            autoHideDuration={2000}
+            onClose={handleCloseAlert}
+          >
+            <Alert onClose={handleCloseAlert} severity='success' sx={{ width: '60%' }} variant='filled'>
               Review Posted !
             </Alert>
           </Snackbar>
@@ -101,13 +111,14 @@ export const DormDataSection: React.FC = () => {
         </div>
 
         <div className='Description'>
-          <p style={{color: '#15CD64'}}>Description</p>
-          Address : {dormAddr}<br></br>
+          <p style={{ color: '#15CD64' }}>Description</p>
+          Address : {dormAddr}
+          <br></br>
           Telephone : {dormTel} <br></br>
           Price : {dormMinPrice} - {dormMaxPrice} ฿ <br></br>
         </div>
         <div className='Description'>
-          <p style={{color: '#15CD64' }}>Facilities</p>
+          <p style={{ color: '#15CD64' }}>Facilities</p>
           <div className='Facility-grid-container'>
             {dormFacilities
               .filter((facility: any) => facility.value)
@@ -116,12 +127,13 @@ export const DormDataSection: React.FC = () => {
                   <div>
                     <div className='Facility-grid-item'>
                       <div className='Icon'>
-                        <FontAwesomeIcon icon={faCircleCheck} color='#15CD64'/>
+                        <FontAwesomeIcon icon={faCircleCheck} color='#15CD64' />
                       </div>
                       <p>{facility.utl.toUpperCase()}</p>
                     </div>
                   </div>
-                )})}
+                );
+              })}
           </div>
         </div>
       </Box>
