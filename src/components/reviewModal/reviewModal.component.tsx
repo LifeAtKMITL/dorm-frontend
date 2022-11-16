@@ -39,8 +39,8 @@ export const ReviewModalComponent = ({open, setOpen, openAlert, setOpenAlert}: F
 
     // posted textReview
     console.log('review : ', textReview);
-    if (textReview == '') {
-      alert('Please fill review box  ☜(ﾟヮﾟ☜)');
+    if (textReview.trim() == '') {
+      alert('Please fill review box ☜(ﾟヮﾟ☜)');
       return;
     }
     else {

@@ -16,9 +16,9 @@ const NavBar = () => {
         <div className='navbar'>
           <div className='logo'>
             <div className='logo-pic'>
-              <a href='/' className='logo-link'>
+              <Link to='/' className='logo-link'>
                 <img className='logo-img' src={logo} alt='' />
-              </a>
+              </Link>
             </div>
             {/* <div className='separateLogoLine'></div> */}
             <div className='text-sm text-white font-link mx-2'>X</div>

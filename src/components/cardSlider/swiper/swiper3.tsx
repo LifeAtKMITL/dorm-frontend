@@ -21,7 +21,7 @@ const Swipe3 = (props: any) => {
   return (
     <>
       <Swiper
-        slidesPerView={1.4}
+        slidesPerView={1.3}
         spaceBetween={0}
         centeredSlides={true}
         pagination={{
