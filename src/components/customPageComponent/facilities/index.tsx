@@ -39,6 +39,7 @@ const Facilities = (props: any) => {
     props.func('luandry');
   };
   return (
+      
     <div className='facilities-container'>
       <div className='facilities-border'>
         <div className='c1'>
@@ -167,6 +168,8 @@ const Facilities = (props: any) => {
         </div>
       </div>
     </div>
+    
+
   );
 };
 

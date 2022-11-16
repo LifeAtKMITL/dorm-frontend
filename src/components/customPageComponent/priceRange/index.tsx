@@ -21,6 +21,7 @@ const RangeSlider = (props: any) => {
   // end of send props
   return (
     <div className='priceRange-container'>
+      <div className='Label'><p className='font-link'>Price range</p></div>
       <div className='priceRangeBox'>
         <div className='prBox'>
           <Slider
