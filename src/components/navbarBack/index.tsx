@@ -10,11 +10,11 @@ const NavBarBack = () => {
     <div>
       <nav>
         <div className='navbarX'>
-          <a href='/home'>
+          <Link to='/home'>
             <button className='tb'>
               <span className='font-link'>{'< BACK'}</span>
             </button>
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
