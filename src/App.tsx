@@ -5,7 +5,7 @@ import Routes from 'routes';
 
 function App() {
   return (
-    <LiffProvider liffId='1657631189-9wk8vxJA'>
+    <LiffProvider liffId='1657631189-W55Rwkyr'>
       <AuthProvider>
         <Routes />
       </AuthProvider>
