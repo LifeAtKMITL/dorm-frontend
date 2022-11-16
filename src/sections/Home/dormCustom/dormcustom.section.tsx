@@ -13,7 +13,7 @@ export const DormCustomSection: React.FC = () => {
       <Box py={4}>
         <div className='Box'>
           {/* <Typography variant="h6">(Dorm-Custom)</Typography> */}
-          <Typography variant='h2' mb={1} fontWeight={500} sx={{fontSize: "55px"}}>
+          <Typography variant='h2' mb={1} fontWeight={500} sx={{fontSize: "40px"}}>
             <p className='font-link'>Customize your dorm</p>
           </Typography>
           <Typography variant='h5' m={3}>
