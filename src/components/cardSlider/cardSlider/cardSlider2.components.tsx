@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from 'utils/axios';
 import { CardComponent } from '../card/card.component';
 import { Swipe } from '../swiper/swiper';
 
@@ -13,7 +13,7 @@ export const SliderComponent2 = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(baseURL).then((res: any) => {
+    axios.get('/dorm').then((res: any) => {
       let temp = res.data;
       temp.sort(function (a: any, b: any) {
         let keyA = a.avgScore;
