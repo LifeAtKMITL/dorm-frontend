@@ -22,18 +22,15 @@ const Zone = (props: any) => {
   const dormName3 = 'ซอยหอใหม่';
 
   return (
-    <div>
-      <div className='Label'><p className='font-link'>Zone</p></div>
-      <div className='zone_button-container'>
-        <div onClick={keki}>
-          <ZoneButton dn={dormName1} />
-        </div>
-        <div onClick={rnp}>
-          <ZoneButton dn={dormName2} />
-        </div>
-        <div onClick={soiHorMai}>
-          <ZoneButton dn={dormName3} />
-        </div>
+    <div className='zone_button-container'>
+      <div onClick={keki}>
+        <ZoneButton dn={dormName1} />
+      </div>
+      <div onClick={rnp}>
+        <ZoneButton dn={dormName2} />
+      </div>
+      <div onClick={soiHorMai}>
+        <ZoneButton dn={dormName3} />
       </div>
     </div>
   );
