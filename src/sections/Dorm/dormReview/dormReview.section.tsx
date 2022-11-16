@@ -37,7 +37,7 @@ export const DormReviewSection = ({ open, setOpen, openAlert, setOpenAlert }: Fu
     <div>
       <div className='Box-zone'>
         <Box>
-          <div className='Dorm-header'>
+          <div className='Review-header'>
             <h1 className='Dorm-review'>Review</h1>
           </div>
           {posts.map((post) => (
