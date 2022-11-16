@@ -6,7 +6,7 @@ import Zone from 'components/customPageComponent/zone';
 import RangeSlider from 'components/customPageComponent/priceRange/index';
 import Facilities from 'components/customPageComponent/facilities';
 import GoButton from 'components/customPageComponent/GoButton';
-import axios from 'axios';
+import axios from 'utils/axios';
 import Swipe3 from 'components/cardSlider/swiper/swiper3';
 import SliderComponent3 from 'components/cardSlider/cardSlider/cardSlider3.components';
 import NavBarBack from 'components/navbarBack';
@@ -67,7 +67,7 @@ const Custom = () => {
     ],
   };
   useEffect(() => {
-    axios.post(baseURL, temp).then((res) => {
+    axios.post('/dorm/filter', temp).then((res) => {
       console.log('res =', res.data);
       setSendData(res.data);
     });
@@ -809,7 +809,7 @@ const Custom = () => {
         facilities: fac,
       };
       console.log('send =', temp);
-      axios.post(baseURL, temp).then((res) => {
+      axios.post('/dorm/filter', temp).then((res) => {
         console.log('res =', res.data);
         setSendData(res.data);
       });
