@@ -40,7 +40,8 @@ const Facilities = (props: any) => {
   };
   return (
     <div className='facilities-container'>
-      <div className='facilities-border'>
+      <fieldset className='facilities-border'>
+        <legend className='textAtBorder font-link'>FACILITIES</legend>
         <div className='c1'>
           <div className='testBox'>
             <label className='switch'>
@@ -49,7 +50,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              aircon
+              Aircon
             </span>
           </div>
 
@@ -60,7 +61,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              furniture
+              Furniture
             </span>
           </div>
 
@@ -71,7 +72,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              waterHeater
+              Water Heater
             </span>
           </div>
 
@@ -82,7 +83,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              fan
+              Fan
             </span>
           </div>
 
@@ -104,7 +105,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              fridge
+              Fridge
             </span>
           </div>
         </div>
@@ -117,7 +118,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              parking
+              Parking
             </span>
           </div>
 
@@ -128,7 +129,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              freeWifi
+              Free Wifi
             </span>
           </div>
 
@@ -139,7 +140,7 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              keyCard
+              Key Card
             </span>
           </div>
 
@@ -161,11 +162,11 @@ const Facilities = (props: any) => {
             </label>
             <span className='testSpan' style={{ color: 'white' }}>
               {' '}
-              luandry
+              Luandry
             </span>
           </div>
         </div>
-      </div>
+      </fieldset>
     </div>
   );
 };

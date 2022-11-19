@@ -26,8 +26,8 @@ const StartPageContent = () => {
             </div>
             <div className='text3'>
               <p>
-                This website will help you find a hostel that meets your needs with our custom system, and also has lots
-                of real tenant reviews.
+                This website will help you find a dormitory that meets your needs with our custom system, and also has
+                lots of real tenant reviews.
               </p>
             </div>
           </div>

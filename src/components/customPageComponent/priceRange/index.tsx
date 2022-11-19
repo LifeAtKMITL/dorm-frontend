@@ -21,7 +21,11 @@ const RangeSlider = (props: any) => {
   // end of send props
   return (
     <div className='priceRange-container'>
-      <div className='priceRangeBox'>
+      <fieldset className='priceRangeBox'>
+        <ul className='desc'>
+          <li>Choose the price range that suits your budget.</li>
+        </ul>
+        <legend className='textAtBorder font-link'>PRICE - RANGE</legend>
         <div className='prBox'>
           <Slider
             // color='primary'
@@ -34,7 +38,7 @@ const RangeSlider = (props: any) => {
             getAriaValueText={valuetext}
           />
         </div>
-      </div>
+      </fieldset>
       {/* <div style={{ color: 'white' }}>
         {x}
         <button onClick={increase}>click me</button>
